@@ -4,9 +4,6 @@ Circuito digital que mide el tiempo de reacción de una persona ante un estímul
 
 Proyecto de la asignatura **Electrónica Digital** del Grado en Ingeniería Electrónica Industrial y Automática (Universidad Carlos III de Madrid, curso 2025-26).
 
-<!-- Añade aquí una foto o un GIF de la placa funcionando -->
-<!-- ![Placa Basys3 midiendo el tiempo de reacción](docs/placa.jpg) -->
-
 <img width="2090" height="1497" alt="image" src="https://github.com/user-attachments/assets/6c4f70f6-c9db-4698-a068-ab37849cc51d" />
 
 ## Funcionamiento
@@ -26,9 +23,6 @@ El sistema está controlado por una **máquina de estados de Moore** con cuatro 
 | `Inicializa` | Pone los contadores a cero y carga el tiempo aleatorio | Siempre → `Aleatorio` |
 | `Aleatorio` | Cuenta atrás del tiempo de espera aleatorio | Fin de la cuenta → `Cuenta` |
 | `Cuenta` | Cuenta los milisegundos hasta que el usuario reacciona | Pulsación → `Espera` |
-
-<!-- Si tienes el diagrama de estados escaneado, añádelo aquí -->
-<!-- ![Diagrama de estados](docs/diagrama_estados.jpg) -->
 
 <img width="1367" height="1000" alt="diagrama_estados" src="https://github.com/user-attachments/assets/4cd7b8fa-6cac-40ea-ba5b-8bac41c3c0cb" />
 
@@ -50,12 +44,9 @@ Bloques principales:
 ## Archivos
 
 ```
-src/
-├── reflejos.vhd      # Entidad principal: máquina de estados, temporización y display
-└── contador.vhd      # Contador BCD 0-9 con habilitación y puesta a cero síncrona
-sim/
-└── reflejos_tb.vhd   # Banco de pruebas
-```
+reflejos.vhd      # Entidad principal: máquina de estados, temporización y display
+contador.vhd      # Contador BCD 0-9 con habilitación y puesta a cero síncrona
+reflejos_tb.vhd   # Banco de pruebas
 
 ## Cómo usarlo
 
